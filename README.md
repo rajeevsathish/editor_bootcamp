@@ -1,27 +1,60 @@
-# EditorBootcamp
+# Collection Editor Setup
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.12.
+This guide will tell you how to run collection editor locally on your system. Follow the instructions below to get started.
 
-## Development server
+## Prerequisites
+Before cloning and running the project, make sure you have the following software installed on your machine:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- `` Node.js v16 or greater``
 
-## Code scaffolding
+- ``Yarn``
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- ``Angular CLI``
 
-## Build
+After installing Node.js, open a terminal and run the following command to install the Angular CLI globally:
+```
+npm install -g @angular/cli@14
+```
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Clone the Repository
+To clone the repository, open a terminal and run the following command:
+```
+git clone https://github.com/rajeevsathish/editor_bootcamp.git
+```
+---
+## Install Dependencies
+Navigate to the project's root directory by running the following command:
+```
+cd editor_bootcamp
+```
 
-## Running unit tests
+Then, install the project dependencies by running:
+```
+yarn install
+```
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Configuration of the Token
+Configure the token for the application to run by following the below instructions
+- Open ``server.js``
+- Set the value of ``API_AUTH_TOKEN`` in the following format
+    ```
+    const API_AUTH_TOKEN = "<API token provided>";
+    ```
+---
+## Run the Project
 
-## Running end-to-end tests
+- Run the server
+    ```
+    node server
+    ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- To run the frontend  project, use the command:
 
-## Further help
+    ```
+    ng serve
+    ```
+After executing this command, the application will be compiled, and a local development server will be started. You can access the project by opening a web browser and navigating to http://localhost:4200/.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+---
